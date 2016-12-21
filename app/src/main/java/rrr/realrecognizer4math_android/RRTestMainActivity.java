@@ -51,7 +51,6 @@ public class RRTestMainActivity extends AppCompatActivity implements CameraBridg
 
     @Override
     public Mat onCameraFrame(CameraBridgeViewBase.CvCameraViewFrame inputFrame) {
-
         Mat mat = inputFrame.gray();
         return RRImgProc.Simplify(mat);
     }
@@ -60,7 +59,6 @@ public class RRTestMainActivity extends AppCompatActivity implements CameraBridg
     @Override
     protected void onResume() {
         super.onResume();
-        RRManager.initOpenCV();
     }
 
     @Override
@@ -104,6 +102,7 @@ public class RRTestMainActivity extends AppCompatActivity implements CameraBridg
 //        Pair<Integer, Integer> size = RRManager.getResolution();
 //        mOpenCvCameraView.setMaxFrameSize(size.first, size.second);
         mOpenCvCameraView.enableView();
+
 //        mOpenCvCameraView.getpara
 
         Mat a;
